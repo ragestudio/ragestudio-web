@@ -1,0 +1,12 @@
+[
+    {
+        "label": "Github",
+        "url": "https://github.com/ragestudio",
+        "icon": "SiGithub"
+    },
+    {
+        "label": "Support this project",
+        "url": "https://www.paypal.com/donate/?hosted_button_id=S4TWMAN79KC76",
+        "icon": "SiGithubsponsors"
+    }
+]
