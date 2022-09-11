@@ -1,0 +1,25 @@
+const express = require("express")
+const path = require("path")
+const cors = require("cors")
+
+const app = express()
+
+const portFromArgs = process.argv[2]
+let portListen = portFromArgs ? portFromArgs : 9000
+
+app.use(cors({
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: true,
+  optionsSuccessStatus: 204
+}))
+
+app.use(express.static(path.join(__dirname, "build")))
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "dist", "index.html"))
+})
+
+app.listen(portListen)
+
+console.log(`�  Listening app in port [${portListen}]`)
