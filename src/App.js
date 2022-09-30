@@ -1,5 +1,4 @@
 import React from "react"
-import logo from "./logo.svg"
 import * as Icons from "react-icons/si"
 
 import links from "./links.json"
@@ -18,7 +17,11 @@ function App() {
   }
 
   return <div className="app">
-    <img src={logo} className="logo" alt="logo" />
+    <img src={"/logo.svg"} className="logo" alt="logo" />
+
+    <div className="mainTextCenter">
+      <h1>Developing new ways</h1>
+    </div>
 
     <div className="footer">
       {renderLinks()}
